@@ -261,6 +261,12 @@ nav a:hover {
   height: auto;
 }
 
+.popisek {
+  text-align: center;
+  background-color: #444;
+  max-width: auto;
+}
+
 @media (min-width: 576px) {
   .drink {
     width: 50%;
