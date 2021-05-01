@@ -19,8 +19,23 @@ for (let i = 0; i < navLinkElm.length; i++) {
   });
 }
 
+const orderElm = document.querySelector('.order-btn');
+const drinkElm = document.querySelector('.drink__cup');
+let notOrdered = true;
+
+orderElm.addEventListener('click', () => {
+  if (notOrdered) {
+    orderElm.textContent = 'Zrušit';
+    drinkElm.classList.add('drink__cup--selected');
+    notOrdered = false;
+  } else {
+    orderElm.textContent = 'Objednat';
+    drinkElm.classList.remove('drink__cup--selected');
+    notOrdered = true;
+  }
+});
+
 /*
 
-Navigaci budeme chtít schovat i po přesunutí na nějakou sekci. Připojte tedy posluchač události také na všechny položky navigace. Zařiďte, aby se navigace při kliknutí na libovolnou její položku schovala. Zde se vám jistě bude hodit metoda querySelectorAll.
-Jakmile je váš kód funkční, proveďte commmit s hezky popisnou zprávou a pushněte do vzdáleného repozitáře.
+
 */
